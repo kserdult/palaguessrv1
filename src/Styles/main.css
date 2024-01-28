@@ -57,8 +57,7 @@ img {
 }
 
 .guessBox {
-  overflow-x: auto;
-  overflow-y: hidden;
+  margin: 0 auto;
   width: 50rem;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -67,7 +66,6 @@ img {
   display: none;
 }
 nav {
-  width: 100vw;
 }
 
 .wrong {
@@ -94,25 +92,25 @@ nav {
   animation-delay: 0s;
 }
 .anim2 {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 .anim3 {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .anim4 {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 .anim5 {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 .anim6 {
-  animation-delay: 5s;
+  animation-delay: 2.5s;
 }
 .anim7 {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 .anim8 {
-  animation-delay: 7s;
+  animation-delay: 3.5s;
 }
 
 @keyframes fadeInAnimation {
@@ -122,4 +120,13 @@ nav {
   100% {
     opacity: 1;
   }
+}
+
+.suggestion {
+  position: fixed;
+}
+
+.dropdownSelector {
+  width: 15rem;
+  margin: 0 auto;
 }
