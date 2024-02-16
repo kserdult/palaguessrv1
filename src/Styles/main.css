@@ -92,25 +92,25 @@ nav {
   animation-delay: 0s;
 }
 .anim2 {
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
 }
 .anim3 {
-  animation-delay: 1s;
+  animation-delay: 0.4s;
 }
 .anim4 {
-  animation-delay: 1.5s;
+  animation-delay: 0.6s;
 }
 .anim5 {
-  animation-delay: 2s;
+  animation-delay: 0.8s;
 }
 .anim6 {
-  animation-delay: 2.5s;
+  animation-delay: 1s;
 }
 .anim7 {
-  animation-delay: 3s;
+  animation-delay: 1.2s;
 }
 .anim8 {
-  animation-delay: 3.5s;
+  animation-delay: 1.4s;
 }
 
 @keyframes fadeInAnimation {
@@ -129,4 +129,29 @@ nav {
 .dropdownSelector {
   width: 15rem;
   margin: 0 auto;
+}
+
+.endButton {
+  padding: 0.6rem;
+  background-color: white;
+  color: black;
+  border-radius: 1.5rem;
+}
+
+.endScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInAnimation 1.5s ease-in-out 2.5s forwards;
+}
+.hideEnd {
+  display: none;
 }
