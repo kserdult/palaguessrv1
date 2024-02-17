@@ -59,12 +59,12 @@ img {
 .guessBox {
   margin: 0 auto;
   width: 50rem;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  /*-ms-overflow-style: none;
+  scrollbar-width: none;*/
 }
-.guessBox::-webkit-scrollbar {
+/*.guessBox::-webkit-scrollbar {
   display: none;
-}
+}*/
 nav {
 }
 
@@ -154,4 +154,59 @@ nav {
 }
 .hideEnd {
   display: none;
+}
+
+.filter &__menu {
+  margin: 0.125rem auto;
+}
+
+.filter &__option {
+  background-color: white;
+
+  &--is-focused {
+    background-color: lightblue;
+  }
+}
+
+.filter &__group {
+  padding: 0;
+}
+
+.filter &__menu-portal {
+  border: 1px solid darkblue;
+}
+
+@media screen and (max-width: 800px) {
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #5e5e5e #262626;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #262626;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
+  .guessBox {
+    width: 90vw;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  .guess {
+    width: 42rem;
+  }
+  .labels {
+    width: 42rem;
+  }
 }

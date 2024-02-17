@@ -10,19 +10,28 @@ const Input = ({ setGuesses, guesses, Champions, nameList, setNameList }) => {
       }
     });
   };
+  const colourStyles = {
+    menuList: (styles) => ({
+      ...styles,
+      background: "black",
+    }),
+    option: (styles, { isFocused, isSelected }) => ({
+      ...styles,
+      background: isFocused ? "darkgrey" : isSelected ? "darkgrey" : undefined,
+      zIndex: 1,
+    }),
+    menu: (base) => ({
+      ...base,
+      zIndex: 100,
+    }),
+  };
   return (
     <div>
       <div className="dropdownSelector">
         <Select
           options={nameList}
-          style={{
-            color: "hsl(0, 0%, 40%)",
-            display: "inline-block",
-            fontSize: 12,
-            fontStyle: "italic",
-            marginTop: "1em",
-          }}
           onChange={handleChange}
+          styles={colourStyles}
         />
       </div>
     </div>
