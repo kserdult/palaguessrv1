@@ -1,4 +1,5 @@
 import React from "react";
+import { PiArrowFatDownLight, PiArrowFatUpLight } from "react-icons/pi";
 
 const Guess = ({ champion, correct }) => {
   return (
@@ -36,14 +37,24 @@ const Guess = ({ champion, correct }) => {
       </div>
       <div
         className={`guessCard anim6 ${
-          champion.damage === correct.damage ? "correct" : "wrong"
+          champion.damage === correct.damage
+            ? "correct"
+            : champion.damage.includes(correct.damage) ||
+              correct.damage.includes(champion.damage)
+            ? "partial"
+            : "wrong"
         }`}
       >
         <h2>{champion.damage}</h2>
       </div>
       <div
         className={`guessCard anim7 ${
-          champion.projectile === correct.projectile ? "correct" : "wrong"
+          champion.projectile === correct.projectile
+            ? "correct"
+            : champion.projectile.includes(correct.projectile) ||
+              correct.projectile.includes(champion.projectile)
+            ? "partial"
+            : "wrong"
         }`}
       >
         <h2>{champion.projectile}</h2>
@@ -54,6 +65,13 @@ const Guess = ({ champion, correct }) => {
         }`}
       >
         <h2>{champion.releaseyear}</h2>
+        {correct.releaseyear > champion.releaseyear ? (
+          <PiArrowFatUpLight className="arrow" />
+        ) : correct.releaseyear === champion.releaseyear ? (
+          ""
+        ) : (
+          <PiArrowFatDownLight className="arrow" />
+        )}
       </div>
     </div>
   );

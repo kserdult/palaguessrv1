@@ -28,7 +28,6 @@ const Main = () => {
       }
     });
   }, [guesses]);
-  console.log(correct);
   return (
     <div>
       <nav>
