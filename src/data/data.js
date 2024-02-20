@@ -93,7 +93,7 @@ export const Champions = [
     gender: "Male",
     releaseyear: "2019",
     damage: "Direct",
-    projectile: "Hitscan",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Azaan,
@@ -212,7 +212,7 @@ export const Champions = [
     race: "Wyrin",
     gender: "Male",
     releaseyear: "2016",
-    damage: "Blast",
+    damage: "Direct, Blast",
     projectile: "Projectile",
   },
   {
@@ -285,7 +285,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2019",
     damage: "Direct, Blast",
-    projectile: "Hitscan, Projectile",
+    projectile: "Projectile",
   },
   {
     image: Inara,
@@ -369,7 +369,7 @@ export const Champions = [
     gender: "Male",
     releaseyear: "2018",
     damage: "Direct, Blast",
-    projectile: "Hitscan",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Lex,
@@ -393,7 +393,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2017",
     damage: "Direct, Blast",
-    projectile: "Hitscan",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Lillith,
@@ -405,7 +405,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2022",
     damage: "Direct, Blast",
-    projectile: "Projectile",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Maeve,
@@ -525,7 +525,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2021",
     damage: "Direct",
-    projectile: "Projectile",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Ruckus,
@@ -549,7 +549,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2021",
     damage: "Direct, Blast",
-    projectile: "Hitscan",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Seris,
@@ -645,7 +645,7 @@ export const Champions = [
     gender: "Male",
     releaseyear: "2017",
     damage: "Direct, Blast",
-    projectile: "Projectile",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Tyra,
@@ -657,7 +657,7 @@ export const Champions = [
     gender: "Female",
     releaseyear: "2016",
     damage: "Direct, Blast",
-    projectile: "Hitscan",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: VII,
@@ -681,7 +681,7 @@ export const Champions = [
     gender: "Male",
     releaseyear: "2021",
     damage: "Direct, Blast",
-    projectile: "Projectile",
+    projectile: "Hitscan, Projectile",
   },
   {
     image: Viktor,
