@@ -17,13 +17,35 @@ const Main = () => {
     setCorrect(champList[Math.floor(Math.random() * champList.length)]);
     setNameList(names);
     setEnd(false);
+    localStorage.removeItem("guesses");
+    localStorage.removeItem("correct");
+    localStorage.removeItem("nameList");
+    localStorage.removeItem("champList");
   };
   useEffect(() => {
-    newGame();
+    //newGame();
+    const localGuesses = localStorage.getItem("guesses");
+    const localCorrect = localStorage.getItem("correct");
+    const localNameList = localStorage.getItem("nameList");
+    const localChampList = localStorage.getItem("champList");
+    if (localGuesses) {
+      setGuesses(JSON.parse(localGuesses));
+      setCorrect(JSON.parse(localCorrect));
+      setNameList(JSON.parse(localNameList));
+      setChampList(JSON.parse(localChampList));
+    } else {
+      newGame();
+    }
   }, []);
   useEffect(() => {
+    if (guesses.length >= 1) {
+      localStorage.setItem("guesses", JSON.stringify(guesses));
+      localStorage.setItem("correct", JSON.stringify(correct));
+      localStorage.setItem("nameList", JSON.stringify(nameList));
+      localStorage.setItem("champList", JSON.stringify(champList));
+    }
     guesses.forEach((item) => {
-      if (item === correct) {
+      if (item.name === correct.name) {
         setEnd(true);
       }
     });
